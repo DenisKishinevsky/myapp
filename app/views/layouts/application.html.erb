@@ -1,14 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Myapp</title>
+  <title>My Listing</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	
+	<div data-role="page">
 
-<%= yield %>
+	<div data-role="panel" id="mypanel">
+	    <ul>
+	        <li><%= link_to 'View all listing', forsales_path %></li>
+	        <li><%= link_to 'Add new listing', new_forsale_path %></li>
+	        <li><a href="#">Three</a></li>
+	    </ul>
+	</div><!-- /panel -->
+
+	<div data-role="header"><a  href="#mypanel"class="ui-btn-left ui-btn ui-mini ui-btn-icon-left ui-btn-icon-notext ui-corner-all ui-icon-bars"></a>
+	    <span class="ui-title">My Listings</span></div>
+	<div role="main" class="ui-content">
+	<%= yield %></div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
+	<div data-role="footer"><h4>footer</h4></div>
+
+	</div><!-- page -->
+	
+
 
 </body>
 </html>

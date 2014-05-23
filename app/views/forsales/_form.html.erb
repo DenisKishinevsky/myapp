@@ -1,4 +1,4 @@
-<%= form_for(@forsale) do |f| %>
+<%= simple_form_for @forsale do |f| %>
   <% if @forsale.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@forsale.errors.count, "error") %> prohibited this forsale from being saved:</h2>
@@ -11,10 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+
+    <%= f.input :name , wrapper_html: { class: 'ui-field-contain' } %>
+
   <div class="field">
     <%= f.label :address %><br>
     <%= f.text_field :address %>

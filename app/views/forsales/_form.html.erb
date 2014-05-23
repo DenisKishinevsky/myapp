@@ -1,0 +1,181 @@
+<%= form_for(@forsale) do |f| %>
+  <% if @forsale.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@forsale.errors.count, "error") %> prohibited this forsale from being saved:</h2>
+
+      <ul>
+      <% @forsale.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :gmaps %><br>
+    <%= f.check_box :gmaps %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :postal_code %><br>
+    <%= f.text_field :postal_code %>
+  </div>
+  <div class="field">
+    <%= f.label :province %><br>
+    <%= f.text_field :province %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :house_type %><br>
+    <%= f.text_field :house_type %>
+  </div>
+  <div class="field">
+    <%= f.label :style %><br>
+    <%= f.text_field :style %>
+  </div>
+  <div class="field">
+    <%= f.label :year_build %><br>
+    <%= f.number_field :year_build %>
+  </div>
+  <div class="field">
+    <%= f.label :lot_size %><br>
+    <%= f.text_field :lot_size %>
+  </div>
+  <div class="field">
+    <%= f.label :size %><br>
+    <%= f.text_field :size %>
+  </div>
+  <div class="field">
+    <%= f.label :lot_type %><br>
+    <%= f.text_field :lot_type %>
+  </div>
+  <div class="field">
+    <%= f.label :bedrooms %><br>
+    <%= f.number_field :bedrooms %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom %><br>
+    <%= f.number_field :bathroom %>
+  </div>
+  <div class="field">
+    <%= f.label :ext_finish %><br>
+    <%= f.text_field :ext_finish %>
+  </div>
+  <div class="field">
+    <%= f.label :heating_type %><br>
+    <%= f.text_field :heating_type %>
+  </div>
+  <div class="field">
+    <%= f.label :heating_fuel %><br>
+    <%= f.text_field :heating_fuel %>
+  </div>
+  <div class="field">
+    <%= f.label :cooling_type %><br>
+    <%= f.text_field :cooling_type %>
+  </div>
+  <div class="field">
+    <%= f.label :water %><br>
+    <%= f.text_field :water %>
+  </div>
+  <div class="field">
+    <%= f.label :parking_type %><br>
+    <%= f.text_field :parking_type %>
+  </div>
+  <div class="field">
+    <%= f.label :total_parking_space %><br>
+    <%= f.number_field :total_parking_space %>
+  </div>
+  <div class="field">
+    <%= f.label :liv_room %><br>
+    <%= f.text_field :liv_room %>
+  </div>
+  <div class="field">
+    <%= f.label :din_room %><br>
+    <%= f.text_field :din_room %>
+  </div>
+  <div class="field">
+    <%= f.label :kitchen %><br>
+    <%= f.text_field :kitchen %>
+  </div>
+  <div class="field">
+    <%= f.label :part_bathroom %><br>
+    <%= f.text_field :part_bathroom %>
+  </div>
+  <div class="field">
+    <%= f.label :eating_area %><br>
+    <%= f.text_field :eating_area %>
+  </div>
+  <div class="field">
+    <%= f.label :mas_bedroom %><br>
+    <%= f.text_field :mas_bedroom %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_2 %><br>
+    <%= f.text_field :bedroom_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_3 %><br>
+    <%= f.text_field :bedroom_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_4 %><br>
+    <%= f.text_field :bedroom_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :bedroom_5 %><br>
+    <%= f.text_field :bedroom_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom %><br>
+    <%= f.text_field :bathroom %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom_2 %><br>
+    <%= f.text_field :bathroom_2 %>
+  </div>
+  <div class="field">
+    <%= f.label :bathroom_3 %><br>
+    <%= f.text_field :bathroom_3 %>
+  </div>
+  <div class="field">
+    <%= f.label :laundry_room %><br>
+    <%= f.text_field :laundry_room %>
+  </div>
+  <div class="field">
+    <%= f.label :rec_room %><br>
+    <%= f.text_field :rec_room %>
+  </div>
+  <div class="field">
+    <%= f.label :mls %><br>
+    <%= f.number_field :mls %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
